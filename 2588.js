@@ -16,5 +16,4 @@ rl.question('', (str1) => {
         console.log(num1 * num2)
         rl.close()
     })
-
 })
