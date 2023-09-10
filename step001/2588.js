@@ -6,7 +6,6 @@ const rl = readline.createInterface({
 })
 
 rl.question('', (str1) => {
-    // let trimmed = str.trim()
     let num1 = parseInt(str1.trim())
     rl.question('', (str2) => {
         let trimmed = str2.trim()
