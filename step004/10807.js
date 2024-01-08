@@ -6,7 +6,7 @@ const rl = require('readline').createInterface({
 let N = 0
 let arr = []
 let v = ''
-let result
+let result = 0
 rl.on('line', (str) => {
     if (N === 0) {
         N = parseInt(str.trim())
