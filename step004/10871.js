@@ -8,16 +8,13 @@ let X = 0
 let arr = []
 let result = ''
 rl.on('line', (str) => {
-    if (N === 0) {
-        const splitted = str.trim().split(' ')
-        N = parseInt(splitted[0])
-        X = parseInt(splitted[1])
-        if (N < 1 || X < 1 ) rl.close()
+    if (N === 0 && X === 0) {
+        [N, X] = str.trim().split(' ').map((ele) => parseInt(ele))
     } else {
-        arr = str.trim().split(' ')
+        arr = str.trim().split(' ').map((ele) => parseInt(ele))
         if (arr.length !== X) rl.close()
         arr.forEach((ele) => {
-            if (parseInt(ele) < X) result += `${ele} `
+            if (ele < X) result += `${ele} `
         })
         console.log(result)
         rl.close()

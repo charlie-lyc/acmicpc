@@ -4,13 +4,15 @@ const rl = require('readline').createInterface({
 })
 
 let arr = []
+let max
 rl.on('line', (str) => {
     const num = parseInt(str.trim())
     if (num) arr.push(num)
     if (arr.length === 9) {
-        const max = Math.max(...arr)
-        console.log(max)
-        console.log(arr.indexOf(max) + 1)
+        max = Math.max(...arr)
         rl.close()
     }
+}).on('close', () => {
+    console.log(max)
+    console.log(arr.indexOf(max) + 1)
 })
