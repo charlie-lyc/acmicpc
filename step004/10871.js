@@ -6,17 +6,14 @@ const rl = require('readline').createInterface({
 let N = 0
 let X = 0
 let arr = []
-let result = ''
+let result
 rl.on('line', (str) => {
     if (N === 0 && X === 0) {
         [N, X] = str.trim().split(' ').map((ele) => parseInt(ele))
     } else {
         arr = str.trim().split(' ').map((ele) => parseInt(ele))
-        if (arr.length !== X) rl.close()
-        arr.forEach((ele) => {
-            if (ele < X) result += `${ele} `
-        })
-        console.log(result)
+        if (arr.length !== N) rl.close()
+        result = arr.filter((ele) => ele < X)
         rl.close()
     }
-})
+}).on('close', () => console.log(...result))
