@@ -5,5 +5,6 @@ const rl = require('readline').createInterface({
 
 let S = ''
 rl.on('line', (str) => {
-
-}).on('close', () => console.log(S.length))
+    S = str.trim()
+    rl.close()
+}).on('close', () => console.log(S.charCodeAt(0)))
