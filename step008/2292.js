@@ -3,6 +3,7 @@ const rl = require('readline').createInterface({
     output: process.stdout
 })
 
+
 rl.on('line', (str) => {
 
 }).on('close', () => console.log())
