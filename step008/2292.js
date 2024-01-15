@@ -1,6 +1,6 @@
 const rl = require('readline').createInterface({
     input: process.stdin,
-    output: process.stedout
+    output: process.stdout
 })
 
 rl.on('line', (str) => {

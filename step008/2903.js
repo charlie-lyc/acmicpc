@@ -1,8 +1,11 @@
 const rl = require('readline').createInterface({
     input: process.stdin,
-    output: process.stedout
+    output: process.stdout
 })
 
+let result
 rl.on('line', (str) => {
-
-}).on('close', () => console.log())
+    const N = parseInt(str.trim())
+    result = Math.pow(2 * N + 1, 2)
+    rl.close()
+}).on('close', () => console.log(result))
