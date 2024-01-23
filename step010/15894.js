@@ -3,6 +3,7 @@ const rl = require('readline').createInterface({
     output: process.stdout
 })
 
+let n = 0
 rl.on('line', (str) => {
-
-}).on('close', () => console.log())
+    n = parseInt(str.trim())
+}).on('close', () => console.log(n * 4))

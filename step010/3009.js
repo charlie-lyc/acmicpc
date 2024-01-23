@@ -19,7 +19,6 @@ rl.on('line', (str) => {
         })
         for (const x in xPoints) {
             if (xPoints[x] === 1) result.push(x)
-           
         }
         for (const y in yPoints) {
             if (yPoints[y] === 1) result.push(y)
